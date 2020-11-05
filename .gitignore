@@ -1,0 +1,12 @@
+downloads/
+
+node_modules/
+
+# Maven
+target/
+
+# Gradle
+build/
+
+# IntelliJ IDEA
+.idea/

@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+allprojects {
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(11)
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+dependencies {
+    testImplementation(project(":core"))
+    testImplementation(platform("org.junit:junit-bom:5.7.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+
+test {
+    useJUnitPlatform()
+}

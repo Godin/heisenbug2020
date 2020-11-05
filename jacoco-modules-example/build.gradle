@@ -1,0 +1,16 @@
+plugins {
+    id "java"
+    id "jacoco"
+}
+
+allprojects {
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(11)
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+}
